@@ -17,7 +17,7 @@ function App() {
   const [filterGroup, setFilterGroup] = useState('All');
   const [filterPriority, setFilterPriority] = useState('All');
 
-  const API_URL = 'http://localhost:5000/api/notes';
+  const API_URL = `${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/notes`;
 
   useEffect(() => {
     fetchNotes();
